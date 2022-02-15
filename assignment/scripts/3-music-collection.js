@@ -17,5 +17,25 @@ function addToCollection(title, artist, yearPublished) {
   return album;
 }//end addToCollection
 
-addToCollection('banana', 'monkey', 2022);
+console.log(addToCollection('Horses', 'Patti Smith', 1975));
+console.log(addToCollection('Blood on the Tracks', 'Bob Dylan', 1975));
+console.log(addToCollection('Hunky Dory', 'David Bowie', 1971));
+console.log(addToCollection('Pleased to Meet Me', 'The Replacements', 1987));
+console.log(addToCollection('Hamilton', 'Lin-Manuel Miranda', 2015));
+console.log(addToCollection('Fear of Music', 'Talking Heads', 1979));
 console.log(collection);
+
+function showCollection(array){
+    console.log(`There are ${array.length} albums in the collection.`);
+    for (var i = 0; i < array.length; i++) {
+      //console.log(`${array[i]0} by ${array[i]1}, published in ${array[i]2}`);//Nope
+      //console.log(`by` .title, `published in`.yearPublished`);//Nope
+      //console.log(`${title} by ${artist}, published in ${yearPublished}`);//Nope
+      //console.log(`${[i].title} by ___, published in ___`)// ${[i].title} prints as Undefined
+      //console.log( title 'by', artist, 'published in', yearPublished)// Nope
+      //console.log(`${(title)} by ${(artist)}, published in ${(yearPublished)}`)//Nope
+      console.log(`___ by ___, published in ___`)//this prints
+  }//end for loop
+}//end showCollection
+
+showCollection(collection);
