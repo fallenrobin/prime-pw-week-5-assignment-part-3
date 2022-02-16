@@ -34,8 +34,24 @@ function showCollection(array){
       //console.log(`${[i].title} by ___, published in ___`)// ${[i].title} prints as Undefined
       //console.log( title 'by', artist, 'published in', yearPublished)// Nope
       //console.log(`${(title)} by ${(artist)}, published in ${(yearPublished)}`)//Nope
-      console.log(`___ by ___, published in ___`)//this prints
+      //console.log(`___ by ___, published in ___`)//this does print
+      console.log(`${array[i].title} by ${array[i].artist}, published in ${array[i].yearPublished}`);//Nope
+
   }//end for loop
 }//end showCollection
 
 showCollection(collection);
+
+function findByArtist(musician){
+  let artistFilter = [];
+  for (var i = 0; i < collection.length; i++) {
+    if (collection[i].artist === musician){
+    artistFilter.push(collection[i]);
+  }//end if
+  }//end for loop
+  console.log(artistFilter);
+  return artistFilter;
+}//end findByArtist
+
+findByArtist('Bob Dylan');
+findByArtist('Lawrence Welk');
